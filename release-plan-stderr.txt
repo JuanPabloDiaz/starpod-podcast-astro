@@ -1,0 +1,78 @@
+release prepare
+
+Edits the package.json and changelog files to prepare for release.
+
+Options:
+  --version        Show version number                                 [boolean]
+  --help           Show help                                           [boolean]
+  --fromStdin      Read the summary of changes from stdin instead of building
+                   them from scratch.                                  [boolean]
+  --singlePackage  Allows you to run this command in a non monorepo and define
+                   the package name                                     [string]
+
+ExecaError: Command failed with exit code 1: node /opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/bin/cli.js --ignore-releases --next-version Release
+
+Error: Command failed with exit code 128: git describe --abbrev=0 --tags --first-parent
+fatal: No names found, cannot describe anything.
+    at makeError (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/node_modules/execa/lib/error.js:60:11)
+    at module.exports.sync (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/node_modules/execa/index.js:194:17)
+    at Object.lastTag (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/git.js:31:18)
+    at Changelog.<anonymous> (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:32:56)
+    at Generator.next (<anonymous>)
+    at /opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:4:12)
+    at Changelog.createMarkdown (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:31:16)
+    at Object.<anonymous> (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/cli.js:85:64)
+    at getFinalError (file:///opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/execa/lib/methods/main-async.js:151:17)
+    at async gatherChanges (file:///opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/dist/gather-changes.js:8:20)
+    at async newChangelogContent (file:///opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/dist/cli.js:90:19)
+    at async Object.handler (file:///opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/dist/cli.js:14:36) {
+  shortMessage: 'Command failed with exit code 1: node /opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/bin/cli.js --ignore-releases --next-version Release',
+  command: 'node /opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/bin/cli.js --ignore-releases --next-version Release',
+  escapedCommand: 'node /opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/bin/cli.js --ignore-releases --next-version Release',
+  cwd: '/home/runner/work/starpod-podcast-astro/starpod-podcast-astro',
+  durationMs: 316.147607,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: false,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  exitCode: 1,
+  stdout: 'Error: Command failed with exit code 128: git describe --abbrev=0 --tags --first-parent\n' +
+    'fatal: No names found, cannot describe anything.\n' +
+    '    at makeError (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/node_modules/execa/lib/error.js:60:11)\n' +
+    '    at module.exports.sync (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/node_modules/execa/index.js:194:17)\n' +
+    '    at Object.lastTag (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/git.js:31:18)\n' +
+    '    at Changelog.<anonymous> (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:32:56)\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:8:71\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at __awaiter (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:4:12)\n' +
+    '    at Changelog.createMarkdown (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:31:16)\n' +
+    '    at Object.<anonymous> (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/cli.js:85:64)',
+  stderr: '',
+  stdio: [
+    undefined,
+    'Error: Command failed with exit code 128: git describe --abbrev=0 --tags --first-parent\n' +
+      'fatal: No names found, cannot describe anything.\n' +
+      '    at makeError (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/node_modules/execa/lib/error.js:60:11)\n' +
+      '    at module.exports.sync (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/node_modules/execa/index.js:194:17)\n' +
+      '    at Object.lastTag (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/git.js:31:18)\n' +
+      '    at Changelog.<anonymous> (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:32:56)\n' +
+      '    at Generator.next (<anonymous>)\n' +
+      '    at /opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:8:71\n' +
+      '    at new Promise (<anonymous>)\n' +
+      '    at __awaiter (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:4:12)\n' +
+      '    at Changelog.createMarkdown (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/changelog.js:31:16)\n' +
+      '    at Object.<anonymous> (/opt/hostedtoolcache/node/24.19.0/x64/lib/node_modules/release-plan/node_modules/github-changelog/lib/cli.js:85:64)',
+    ''
+  ],
+  ipcOutput: [],
+  pipedFrom: []
+}
